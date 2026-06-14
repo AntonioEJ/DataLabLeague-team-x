@@ -43,7 +43,7 @@ Una entrega está completa solo si tiene:
 
 ---
 
-## Principios Fundamentales de Ingeniería
+## Principios Fundamentales de Ingeniería de datos
 
 Todos los productos de datos deben seguir estos principios:
 
@@ -191,6 +191,23 @@ DB_PASSWORD = "admin123"
 - Funciones: `test_<comportamiento>()`
 - Usar fixtures sobre setup/teardown
 - Mock de dependencias externas (DB, S3, APIs)
+
+---
+
+## Criterios de Calidad de Código
+
+Todo código generado o revisado debe cumplir estos 10 criterios:
+
+1. **PEP 8 compliance** — naming, formatting, imports, line length
+2. **Type annotations** — presence and correctness
+3. **Docstrings** — completeness and style
+4. **Error handling** — specificity, logging, no silent failures
+5. **Logging** — correct use of `logging` module, appropriate levels
+6. **Configuration** — no hardcoded secrets, paths, or credentials
+7. **Security** — OWASP Top 10 awareness (injection, secrets exposure, etc.)
+8. **Modularity** — separation of concerns, no monolithic logic
+9. **Testability** — functions are testable, side effects are isolated
+10. **Reproducibility** — no environment-specific assumptions
 
 ---
 
