@@ -235,3 +235,21 @@ Para tareas específicas invoca los agentes disponibles en `.github/agents/`:
 - **07_pipeline** — Orquestación de pipelines
 - **08_observability** — Logging, métricas y monitoreo
 - **09_reviewer** — Revisión de código (read-only)
+
+---
+
+## Instrucciones Especializadas
+
+Instrucciones contextuales para dominios específicos están disponibles en `.github/instructions/`:
+
+```
+.github/
+├── copilot-instructions.md (instrucciones generales)
+└── instructions/
+    ├── backend.instructions.md — Estándares para código backend
+    ├── mcp.instructions.md — Configuración de Model Context Protocol
+    ├── testing.instructions.md — Estrategias de testing y cobertura
+    └── security.instructions.md — Seguridad, secrets, compliance
+```
+
+Estas instrucciones especializadas aplican reglas adicionales según el contexto y módulo en el que se trabaja.
