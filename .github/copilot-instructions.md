@@ -43,7 +43,17 @@ Una entrega está completa solo si tiene:
 
 ---
 
-## Principios Fundamentales de Ingeniería de datos
+## Arquitectura
+
+- Sigue las reglas de arquitectura documentadas en `docs/architecture.md`.
+- Para decisiones arquitectónicas, revisa `docs/adr/`.
+- No introduzcas nuevos patrones arquitectónicos sin registrar un ADR.
+- Las arquitecturas soportadas son:
+  - **Databricks Medallion**: Bronze/Silver/Gold layers para transformación de datos (ver `docs/adr/ADR-001-databricks-medallion.md`)
+  - **SAS Analytics**: Platform-native approach con SAS Data Management y SAS Viya (ver `docs/adr/ADR-002-sas-analytics.md`)
+- Selecciona la arquitectura según contexto: infraestructura disponible, skills del equipo, y requisitos de gobernanza.
+
+---
 
 Todos los productos de datos deben seguir estos principios:
 
