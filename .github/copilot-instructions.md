@@ -196,18 +196,15 @@ DB_PASSWORD = "admin123"
 
 ## Agentes Especializados
 
-Para tareas específicas de revisión, análisis, planificación o implementación, invoca los agentes especializados disponibles en `.github/agents/`:
+Para tareas específicas invoca los agentes disponibles en `.github/agents/`:
 
-- **00_enrich-data-story-user** — Entrada inicial para enriquecer historias de usuario
-- **01_planner** — Planificación y estructuración
-- **02_data-quality** — Calidad de datos y validación
+- **00_enrich-data-story-user** — Enriquecer historias de usuario de datos
+- **01_planner** — Planificación y estructuración de casos de uso
+- **02_data-quality** — Reglas DQ y validación de datos
 - **03_coder** — Implementación de código
 - **04_qa** — Pruebas y aseguramiento de calidad
 - **05_documentation** — Generación de documentación
 - **06_compliance-security** — Cumplimiento y seguridad
 - **07_pipeline** — Orquestación de pipelines
 - **08_observability** — Logging, métricas y monitoreo
-- **09_reviewer** — Análisis y revisión de código
-
-Consulta `AGENTS.md` para detalles sobre cada agente y su especialización.
-
+- **09_reviewer** — Revisión de código (read-only)
