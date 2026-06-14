@@ -43,37 +43,24 @@ Una entrega está completa solo si tiene:
 
 ---
 
-## Reviewer Agent - Estándares de Revisión de Código
-
-### Rol del Reviewer
-
-El Reviewer es un agente especializado en análisis de código y feedback de calidad. Revisa Python, SQL, YAML y código de infraestructura siguiendo estándares enterprise data engineering, MLOps, PEP 8 y cloud-native.
-
-**Restricciones del Reviewer**:
-- NO modifica archivos
-- NO sugiere implementar cambios
-- NO ejecuta comandos
-- SOLO lee y busca archivos para análisis
-- SIEMPRE basa feedback en código actual
-
-### Principios Fundamentales de Ingeniería
+## Principios Fundamentales de Ingeniería
 
 Todos los productos de datos deben seguir estos principios:
 
-#### 1. Legibilidad sobre complejidad
+### 1. Legibilidad sobre complejidad
 - Preferir implementaciones explícitas y mantenibles
 - Evitar abstracciones innecesarias
 - Evitar over-engineering y comportamiento mágico
 - El código debe ser comprensible en minutos, no horas
 
-#### 2. Mentalidad production-first
+### 2. Mentalidad production-first
 - Asumir que todo código puede ejecutarse en producción
 - Incluir logging y error handling
 - Ser testeable y observable
 - Evitar hardcoding de paths y credenciales
 - Soportar ejecución en cloud
 
-#### 3. Reproducibilidad
+### 3. Reproducibilidad
 Cada workflow debe ser reproducible en:
 - Desarrollo local
 - Docker
@@ -82,17 +69,19 @@ Cada workflow debe ser reproducible en:
 - ECS/Fargate / Kubernetes
 - Servidores de producción
 
-#### 4. Modularidad
+### 4. Modularidad
 - Separar lógica de negocio, infraestructura, acceso a datos
 - Evitar monolithic scripts
 - Cada componente debe tener una responsabilidad clara
 
-### Estándares Python
+---
 
-#### Python 3.11+
+## Estándares de Código
+
+### Python 3.11+
 Todo código debe ser compatible con Python 3.11 mínimo.
 
-#### PEP 8 - Convenciones de Nombres
+### PEP 8 - Convenciones de Nombres
 
 | Elemento | Convención | Ejemplo |
 |---|---|---|
@@ -104,7 +93,7 @@ Todo código debe ser compatible con Python 3.11 mínimo.
 | Constantes | `UPPER_SNAKE_CASE` | `MAX_RETRIES = 3` |
 | Miembros privados | `_underscore` | `_internal_cache` |
 
-#### Formato de Código
+### Formato de Código
 
 - Línea máxima: **88 caracteres** (Black-compatible)
 - Indentación: **4 espacios** (nunca tabs)
@@ -118,7 +107,7 @@ Todo código debe ser compatible con Python 3.11 mínimo.
 - Un import por línea
 - Evitar wildcard imports (`from x import *`)
 
-#### Type Annotations (Requeridas)
+### Type Annotations (Requeridas)
 
 ```python
 # ✅ Correcto
@@ -136,7 +125,7 @@ def compute_rmse(y_true, y_pred):
 - Usar `list[T]`, `dict[K, V]`, `tuple[T, ...]` (lowercase, Python 3.9+)
 - Evitar `Any` sin justificación explícita
 
-#### Docstrings (Google Style)
+### Docstrings (Google Style)
 
 ```python
 def load_predictions(shop_id: int, date: str) -> pd.DataFrame:
@@ -154,7 +143,7 @@ def load_predictions(shop_id: int, date: str) -> pd.DataFrame:
     """
 ```
 
-#### Error Handling
+### Error Handling
 
 ```python
 # ✅ Correcto
@@ -171,7 +160,7 @@ except Exception:
     pass  # Silent failure
 ```
 
-#### Logging (No print())
+### Logging (No print())
 
 ```python
 import logging
@@ -183,7 +172,7 @@ logger.warning("Missing values detected: %d rows", missing_count)
 logger.error("Failed to connect to database: %s", str(e))
 ```
 
-#### Configuración (No hardcoding)
+### Configuración (No hardcoding)
 
 ```python
 # ✅ Correcto
@@ -195,7 +184,7 @@ DB_HOST = "localhost"
 DB_PASSWORD = "admin123"
 ```
 
-#### Testing con pytest
+### Testing con pytest
 
 - Usar `pytest` para todos los tests
 - Archivos: `test_<module>.py`
@@ -203,44 +192,22 @@ DB_PASSWORD = "admin123"
 - Usar fixtures sobre setup/teardown
 - Mock de dependencias externas (DB, S3, APIs)
 
-### Enfoque de Revisión de Código
+---
 
-Evalúar y reportar sobre:
+## Agentes Especializados
 
-1. **PEP 8 compliance** — naming, formatting, imports, line length
-2. **Type annotations** — presencia y corrección
-3. **Docstrings** — completitud y estilo
-4. **Error handling** — especificidad, logging, no fallos silenciosos
-5. **Logging** — uso correcto del módulo `logging`
-6. **Configuración** — sin secrets, paths o credenciales hardcoded
-7. **Seguridad** — awareness de OWASP Top 10
-8. **Modularidad** — separación de concerns
-9. **Testabilidad** — funciones testables, side effects aislados
-10. **Reproducibilidad** — sin asunciones environment-specific
+Para tareas específicas de revisión, análisis, planificación o implementación, invoca los agentes especializados disponibles en `.github/agents/`:
 
-### Formato de Salida del Reviewer
+- **00_enrich-data-story-user** — Entrada inicial para enriquecer historias de usuario
+- **01_planner** — Planificación y estructuración
+- **02_data-quality** — Calidad de datos y validación
+- **03_coder** — Implementación de código
+- **04_qa** — Pruebas y aseguramiento de calidad
+- **05_documentation** — Generación de documentación
+- **06_compliance-security** — Cumplimiento y seguridad
+- **07_pipeline** — Orquestación de pipelines
+- **08_observability** — Logging, métricas y monitoreo
+- **09_reviewer** — Análisis y revisión de código
 
-Estructura cada revisión de código así:
+Consulta `AGENTS.md` para detalles sobre cada agente y su especialización.
 
-#### Summary
-Evaluación general de 2-4 frases sobre la calidad del código.
-
-#### Issues Found
-
-| # | Severity | Categoría | Ubicación | Descripción | Recomendación |
-|---|----------|-----------|-----------|-------------|-----------------|
-| 1 | 🔴 Critical | Seguridad | `config.py:12` | Contraseña DB hardcoded | Usar `os.environ["DB_PASSWORD"]` |
-| 2 | 🟡 Warning | PEP 8 | `train.py:45` | Línea > 88 caracteres | Partir en múltiples líneas |
-| 3 | 🔵 Info | Docstring | `etl.py:30` | Falta docstring en función pública | Agregar docstring Google-style |
-
-**Niveles de Severity**:
-- 🔴 **Critical** — debe arreglarse antes de merge (seguridad, correctitud, crashes)
-- 🟠 **Major** — debería arreglarse (viola estándares, afecta mantenibilidad)
-- 🟡 **Warning** — recomendado arreglar (estilo, claridad, best practice)
-- 🔵 **Info** — mejora opcional (estilo menor, documentación)
-
-#### Positive Observations
-Listar qué se hace bien.
-
-#### Recommended Next Steps
-Lista priorizada de acciones para el desarrollador.
