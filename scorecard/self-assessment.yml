@@ -1,0 +1,122 @@
+---
+# Self-Assessment Scorecard
+# DataLabLeague Team X
+# Date: 2024-06-14
+
+metadata:
+  team: Team X
+  project: DataLabLeague
+  assessment_date: 2024-06-14
+  next_review: 2024-09-14
+  assessor: Technical Lead
+
+dimensions:
+  execution:
+    weight: 25
+    score: 4.2
+    max_score: 5
+    description: Calidad de ejecución del proyecto
+    metrics:
+      - name: On-time delivery
+        score: 4
+        evidence: 90% of deliverables on time
+      - name: Code quality
+        score: 5
+        evidence: 0 critical issues
+      - name: Documentation
+        score: 4.5
+        evidence: 50+ documents, well maintained
+
+  quality:
+    weight: 25
+    score: 4.5
+    max_score: 5
+    description: Calidad de datos y procesos
+    metrics:
+      - name: Data quality score
+        score: 4.5
+        evidence: 94.2% overall
+      - name: Test coverage
+        score: 4
+        evidence: 83% average
+      - name: Defect resolution
+        score: 5
+        evidence: All critical issues resolved
+
+  innovation:
+    weight: 20
+    score: 4.0
+    max_score: 5
+    description: Innovación y mejoras
+    metrics:
+      - name: New solutions
+        score: 4
+        evidence: 6 new features delivered
+      - name: Process improvements
+        score: 4
+        evidence: 5 optimizations implemented
+      - name: Technology adoption
+        score: 4
+        evidence: Modern stack used
+
+  governance:
+    weight: 15
+    score: 4.3
+    max_score: 5
+    description: Gobernanza y cumplimiento
+    metrics:
+      - name: Policy compliance
+        score: 4.5
+        evidence: 100% policies implemented
+      - name: Audit results
+        score: 4
+        evidence: 3 minor findings only
+      - name: Security posture
+        score: 4.5
+        evidence: Zero high-severity issues
+
+  teamwork:
+    weight: 15
+    score: 4.4
+    max_score: 5
+    description: Colaboración y comunicación
+    metrics:
+      - name: Cross-functional collaboration
+        score: 4.5
+        evidence: Daily standups, active participation
+      - name: Knowledge sharing
+        score: 4.5
+        evidence: Wiki updated, brown bags held
+      - name: Stakeholder engagement
+        score: 4
+        evidence: Regular demos, feedback loops
+
+overall_score: 4.28
+overall_grade: "A"
+
+strengths:
+  - Strong technical execution
+  - High data quality standards
+  - Excellent documentation
+  - Comprehensive governance
+  - Collaborative culture
+
+areas_for_improvement:
+  - Increase automation further
+  - Expand testing coverage to 90%+
+  - Enhance self-service capabilities
+  - Improve training program
+  - Accelerate innovation cycles
+
+recommendations:
+  - Priority 1: Invest in additional automation tools
+  - Priority 2: Develop advanced analytics capabilities
+  - Priority 3: Create center of excellence for data practices
+  - Priority 4: Establish mentorship program
+  - Priority 5: Plan tech refresh for next year
+
+sign_off:
+  reviewed_by: Technical Lead
+  approved_by: Project Manager
+  date: 2024-06-14
+  status: APPROVED
