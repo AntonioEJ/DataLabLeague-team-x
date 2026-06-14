@@ -36,8 +36,8 @@ Playbook Reutilizable
 
 ### Agents Core (Fase 1)
 
-#### 1. Enrich Data Story User Agent
-**Archivo**: `enrich-data-story-user.agent.md`
+#### 00. Enrich Data Story User Agent
+**Archivo**: `.github/agents/00_enrich-data-story-user.agent.md`
 
 Punto de entrada inicial. Especializado en enriquecimiento de historias de usuario de datos. Conecta necesidad de negocio, KPI, decisión, fuentes, granularidad, reglas DQ, criterios de aceptación y evidencia.
 
@@ -45,7 +45,8 @@ Punto de entrada inicial. Especializado en enriquecimiento de historias de usuar
 
 ---
 
-#### 2. Planner Agent
+#### 01. Planner Agent
+**Archivo**: `.github/agents/01_planner.agent.md`
 **Fase CRISP-DM**: Entendimiento del Negocio
 
 Especializado en planificación de proyectos y estructuración de casos de uso.
@@ -58,7 +59,8 @@ Especializado en planificación de proyectos y estructuración de casos de uso.
 
 ---
 
-#### 3. Coder Agent
+#### 03. Coder Agent
+**Archivo**: `.github/agents/03_coder.agent.md`
 **Fase CRISP-DM**: Preparación de Datos / Implementación
 
 Especializado en implementación de código y desarrollo de funcionalidades.
@@ -70,7 +72,8 @@ Especializado en implementación de código y desarrollo de funcionalidades.
 
 ---
 
-#### 4. QA Agent
+#### 04. QA Agent
+**Archivo**: `.github/agents/04_qa.agent.md`
 **Fase CRISP-DM**: Evaluación
 
 Especializado en pruebas, validación y aseguramiento de calidad.
@@ -82,7 +85,8 @@ Especializado en pruebas, validación y aseguramiento de calidad.
 
 ---
 
-#### 5. Documentation Agent
+#### 05. Documentation Agent
+**Archivo**: `.github/agents/05_documentation.agent.md`
 **Fase CRISP-DM**: Despliegue / Operación
 
 Especializado en generación y mantenimiento de documentación.
@@ -95,7 +99,8 @@ Especializado en generación y mantenimiento de documentación.
 
 ---
 
-#### 6. Data Quality Agent
+#### 02. Data Quality Agent
+**Archivo**: `.github/agents/02_data-quality.agent.md`
 **Fase CRISP-DM**: Entendimiento y Preparación de Datos
 
 Especializado en calidad de datos y validación.
@@ -109,13 +114,19 @@ Especializado en calidad de datos y validación.
 
 ### Agents Complementarios
 
-#### 7. Compliance & Security Agent
+#### 06. Compliance & Security Agent
+**Archivo**: `.github/agents/06_compliance-security.agent.md`
+
 Especializado en cumplimiento normativo y seguridad.
 
-#### 8. Pipeline Agent
+#### 07. Pipeline Agent
+**Archivo**: `.github/agents/07_pipeline.agent.md`
+
 Especializado en pipelines de datos y orquestación.
 
-#### 9. Observability Agent
+#### 08. Observability Agent
+**Archivo**: `.github/agents/08_observability.agent.md`
+
 Especializado en logging, métricas y monitoreo.
 
 ## Configuración
