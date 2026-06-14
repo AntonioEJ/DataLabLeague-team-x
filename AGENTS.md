@@ -4,6 +4,12 @@
 
 Este documento describe los agentes personalizados de GitHub Copilot para el proyecto DataLabLeague.
 
+## Modelo de Agentes - Data Product (Cadena de Valor Agenticia)
+
+![Profuturo - Modelo de agentes Data Product](./images/profuturo-agents-model.png)
+
+**Referencia**: Profuturo - O1 Modelo de agentes Data Product (cadena de valor agenticia)
+
 ## Estrategia de Flujo
 
 ```
