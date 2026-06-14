@@ -88,3 +88,7 @@ pipelines:
 - Actualización de rules
 - Capacitación de equipo
 - Documentación actualizada
+
+## Contribuidores
+
+- Jose Antonio Esparza

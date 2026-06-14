@@ -28,6 +28,10 @@ Demostración funcional del proyecto.
 ```
 evidence/
 ├── data-story.md
+
+## Contribuidores
+
+- Jose Antonio Esparza
 ├── skills.md
 ├── testing.md
 ├── data-quality.md

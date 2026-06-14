@@ -27,4 +27,5 @@ Consulte la documentación en `docs/` para más detalles.
 
 ## Contribuidores
 
+- Jose Antonio Esparza
 - Team X
