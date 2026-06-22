@@ -1,0 +1,39 @@
+{
+  "_comment": "Template genérico para artefactos de input. Reemplazar valores entre {{}} con datos reales.",
+  "metadata": {
+    "artifact_type": "agent_input",
+    "agent_name": "{{XX-agent-name}}",
+    "source_agent": "{{YY-agent-name}}",
+    "target_agent": "{{XX-agent-name}}",
+    "version": "1.0",
+    "status": "draft",
+    "created_at": "{{YYYY-MM-DD}}",
+    "updated_at": "{{YYYY-MM-DD}}"
+  },
+  "context": {
+    "data_product_name": "{{nombre del producto}}",
+    "business_area": "{{área de negocio}}",
+    "crisp_dm_phase": "{{business_understanding | data_understanding | data_preparation | modeling | evaluation | deployment | monitoring}}",
+    "objective": "{{objetivo del agente en este contexto}}",
+    "scope": "{{alcance}}",
+    "constraints": [],
+    "dependencies": []
+  },
+  "input_payload": {},
+  "quality_requirements": {
+    "dq_threshold": 98,
+    "coverage_target": 80
+  },
+  "governance_requirements": {
+    "data_classification": "{{pendiente}}",
+    "pii_handling": "{{pendiente}}"
+  },
+  "security_requirements": {
+    "no_hardcoded_secrets": true,
+    "encryption_required": false
+  },
+  "open_questions": [],
+  "assumptions": [],
+  "risks": [],
+  "expected_outputs": []
+}

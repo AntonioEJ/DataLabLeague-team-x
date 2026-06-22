@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "artifact_type": "agent_handoff",
+    "source_agent": "03-agent-planner",
+    "target_agent": "04-agent-coder",
+    "version": "1.0",
+    "status": "draft",
+    "created_at": "2026-06-22",
+    "requires_human_review": false
+  },
+  "handoff_summary": {
+    "crisp_dm_phase": "data_preparation",
+    "completed_work": ["Plan técnico generado", "coder-input.json creado"],
+    "pending_work": [],
+    "key_decisions": [],
+    "known_limitations": []
+  },
+  "artifacts": {
+    "inputs_used": ["03-agent-planner/inputs/planner-input.json"],
+    "outputs_generated": ["03-agent-planner/outputs/coder-input.json"],
+    "evidence": [],
+    "required_next_inputs": ["04-agent-coder/inputs/coder-input.json"]
+  },
+  "quality_gate": {
+    "passed": false,
+    "checks": [
+      { "name": "Arquitectura seleccionada y documentada", "result": "pending" },
+      { "name": "coder-input.json con spec técnica completa", "result": "pending" },
+      { "name": "Quality gates para agentes siguientes definidos", "result": "pending" },
+      { "name": "coder-input.json copiado a 04-agent-coder/inputs/", "result": "pending" }
+    ],
+    "issues": [],
+    "required_approvals": []
+  },
+  "open_questions": [],
+  "assumptions": [],
+  "risks": [],
+  "blockers": [],
+  "recommendation_to_next_agent": "Implementar respetando estándares PEP 8, sin hardcoding, con logging y error handling. Los controles de PII definidos en governance deben implementarse desde el inicio."
+}

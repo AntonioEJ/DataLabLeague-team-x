@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "agent-output",
+  "description": "Schema genérico para artefactos de output de agentes en la cadena DataLab League.",
+  "type": "object",
+  "required": ["metadata", "execution_summary", "evidence"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["artifact_type", "agent_name", "version", "status", "ready_for_handoff"],
+      "properties": {
+        "artifact_type": { "type": "string", "enum": ["agent_output"] },
+        "agent_name": { "type": "string" },
+        "version": { "type": "string", "pattern": "^\\d+\\.\\d+$" },
+        "status": {
+          "type": "string",
+          "enum": ["draft", "in_review", "approved", "rejected", "ready_for_next_agent", "archived"]
+        },
+        "created_at": { "type": "string", "format": "date" },
+        "updated_at": { "type": "string", "format": "date" },
+        "ready_for_handoff": { "type": "boolean" },
+        "requires_human_review": { "type": "boolean" }
+      }
+    },
+    "execution_summary": {
+      "type": "object",
+      "required": ["objective", "inputs_used", "outputs_generated"],
+      "properties": {
+        "objective": { "type": "string" },
+        "inputs_used": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "outputs_generated": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "decisions_made": { "type": "array", "items": { "type": "string" } },
+        "limitations": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "reference"],
+        "properties": {
+          "type": { "type": "string", "enum": ["commit", "pr", "issue", "file", "screenshot", "log", "other"] },
+          "reference": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "open_questions": { "type": "array", "items": { "type": "object" } },
+    "assumptions": { "type": "array", "items": { "type": "object" } },
+    "risks": { "type": "array", "items": { "type": "object" } }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "_comment": "Template genérico para artefactos de output. Reemplazar valores entre {{}} con datos reales.",
+  "metadata": {
+    "artifact_type": "agent_output",
+    "agent_name": "{{XX-agent-name}}",
+    "version": "1.0",
+    "status": "draft",
+    "created_at": "{{YYYY-MM-DD}}",
+    "updated_at": "{{YYYY-MM-DD}}",
+    "ready_for_handoff": false,
+    "requires_human_review": false
+  },
+  "execution_summary": {
+    "objective": "{{qué hizo este agente}}",
+    "inputs_used": ["{{archivo de input}}"],
+    "outputs_generated": ["{{archivo de output}}"],
+    "decisions_made": [],
+    "limitations": []
+  },
+  "output_payload": {},
+  "evidence": [],
+  "quality_checks": [],
+  "open_questions": [],
+  "assumptions": [],
+  "risks": [],
+  "next_agent_recommendation": "{{qué debe hacer el siguiente agente}}"
+}

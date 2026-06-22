@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "artifact_type": "agent_input",
+    "agent_name": "10-agent-monitoring",
+    "source_agent": "09-agent-deployment",
+    "target_agent": "10-agent-monitoring",
+    "version": "1.0",
+    "status": "draft",
+    "created_at": "2026-06-22",
+    "updated_at": "2026-06-22"
+  },
+  "context": { "data_product_name": "pendiente", "crisp_dm_phase": "monitoring" },
+  "deployment_evidence": [],
+  "kpis_to_monitor": [],
+  "sla_targets": {
+    "availability_pct": 99.5,
+    "dq_score_pct": 98,
+    "latency_minutes": 15
+  },
+  "alert_thresholds": {},
+  "open_questions": [],
+  "assumptions": [],
+  "risks": []
+}

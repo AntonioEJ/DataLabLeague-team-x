@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "artifact_type": "agent_output",
+    "agent_name": "10-agent-monitoring",
+    "version": "1.0",
+    "status": "draft",
+    "created_at": "2026-06-22",
+    "updated_at": "2026-06-22",
+    "ready_for_handoff": false,
+    "crisp_dm_cycle": "complete"
+  },
+  "product": {
+    "name": "pendiente",
+    "version": "1.0",
+    "business_area": "pendiente"
+  },
+  "crisp_dm_phases_completed": [
+    { "phase": "business_understanding", "agents": ["01-enrich-data-story-user", "02-agent-data-governance", "03-agent-planner"], "status": "pending" },
+    { "phase": "data_understanding", "agents": ["01-enrich-data-story-user", "02-agent-data-governance", "03-agent-planner"], "status": "pending" },
+    { "phase": "data_preparation", "agents": ["03-agent-planner", "04-agent-coder", "06-agent-data-quality"], "status": "pending" },
+    { "phase": "modeling", "agents": ["03-agent-planner", "04-agent-coder", "05-agent-qa"], "status": "pending" },
+    { "phase": "evaluation", "agents": ["05-agent-qa", "06-agent-data-quality", "08-agent-compliance-security"], "status": "pending" },
+    { "phase": "deployment", "agents": ["07-agent-documentation", "09-agent-deployment"], "status": "pending" },
+    { "phase": "monitoring", "agents": ["10-agent-monitoring"], "status": "pending" }
+  ],
+  "agents_executed": [],
+  "quality_summary": {
+    "dq_score": null,
+    "test_coverage": null,
+    "security_findings": 0,
+    "open_p0_defects": 0,
+    "governance_approved": false
+  },
+  "evidence": [],
+  "open_questions_resolved": [],
+  "decisions": [],
+  "next_iteration_recommendations": [],
+  "sign_off": {
+    "product_owner": null,
+    "data_owner": null,
+    "governance_lead": null,
+    "tech_lead": null
+  }
+}
