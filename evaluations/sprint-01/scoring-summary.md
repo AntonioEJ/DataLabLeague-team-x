@@ -10,7 +10,7 @@ Resumen consolidado de puntajes de todos los equipos en Sprint 1.
 |--------|----------------------------------|-------------|------------|--------|-------------|
 | Team 01 (Team SOFOM) | 38.75 | 20.00 | 58.75 | 🏆 Sobresaliente | Evaluación completada 2026-06-22 |
 | Team 02 | 0 | 0 | 0 | pendiente | — |
-| Team 03 | 0 | 0 | 0 | pendiente | — |
+| Team 03 (Team Carteras) | 36.50 | 18.50 | 55.00 | 🏆 Sobresaliente | Evaluación completada 2026-06-22 |
 
 ## Escala de Estado
 
