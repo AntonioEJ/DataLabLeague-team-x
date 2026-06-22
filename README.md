@@ -126,6 +126,40 @@ Los artefactos operativos generados por los agentes viven en `/agent-workflow/`.
 
 El agente **Reviewer (99)** es un agente transversal de revisión y aseguramiento de calidad. Puede invocarse en cualquier punto de la cadena y **no modifica archivos**.
 
+---
+
+## Sprint 1 Evaluation
+
+La carpeta `/evaluations/sprint-01/` contiene la infraestructura formal de evaluación para el Sprint 1 de DataLab League.
+
+### Entregables Evaluados
+
+| Entregable | Puntos |
+|-----------|--------|
+| GitHub Copilot Instructions (`githubcopilot-instructions.md` o equivalente) | 40 |
+| README general del repositorio | 20 |
+| **Total Sprint 1** | **60** |
+
+### Estructura de Evaluación
+
+| Carpeta / Archivo | Descripción |
+|-------------------|---|
+| `evaluations/sprint-01/rubrics/` | Rúbricas de evaluación por entregable |
+| `evaluations/sprint-01/teams/team-01/` | Resultados para Team 01 |
+| `evaluations/sprint-01/teams/team-02/` | Resultados para Team 02 |
+| `evaluations/sprint-01/teams/team-03/` | Resultados para Team 03 |
+| `evaluations/sprint-01/scoring-summary.md` | Resumen comparativo de puntajes |
+| `evaluations/sprint-01/sprint-01-scoreboard.md` | Ranking y badges |
+| `evaluations/sprint-01/agent-evaluator/` | Agente evaluador del sprint |
+
+### Agente Evaluador
+
+El agente evaluador está disponible en `.github/agents/99_sprint-01-evaluator.agent.md`.
+
+Utiliza el prompt en `evaluations/sprint-01/agent-evaluator/evaluator-prompt.md` para evaluar cada equipo.
+
+---
+
 ## Contribuidores
 
 - Jose Antonio Esparza
