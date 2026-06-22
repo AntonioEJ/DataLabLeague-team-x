@@ -1,0 +1,47 @@
+{
+  "sprint": "sprint-01",
+  "team_id": "",
+  "team_name": "",
+  "evaluated_at": "",
+  "evaluated_by": "sprint-01-evaluator-agent",
+  "status": "draft",
+  "scores": {
+    "githubcopilot_instructions": {
+      "max_points": 40,
+      "earned_points": 0,
+      "breakdown": [
+        {"criterion": "A. Claridad del propósito y alcance", "max": 5, "earned": 0, "pct": 0, "justification": ""},
+        {"criterion": "B. Alineación DataLab League / CRISP-DM", "max": 6, "earned": 0, "pct": 0, "justification": ""},
+        {"criterion": "C. Estándares de desarrollo y calidad", "max": 7, "earned": 0, "pct": 0, "justification": ""},
+        {"criterion": "D. Data Quality y validaciones", "max": 6, "earned": 0, "pct": 0, "justification": ""},
+        {"criterion": "E. Gobernanza, seguridad y cumplimiento", "max": 6, "earned": 0, "pct": 0, "justification": ""},
+        {"criterion": "F. Uso efectivo de agentes y artefactos", "max": 5, "earned": 0, "pct": 0, "justification": ""},
+        {"criterion": "G. Evidencia GitHub y Definition of Done", "max": 5, "earned": 0, "pct": 0, "justification": ""}
+      ]
+    },
+    "readme": {
+      "max_points": 20,
+      "earned_points": 0,
+      "breakdown": [
+        {"criterion": "A. Descripción ejecutiva del proyecto", "max": 4, "earned": 0, "pct": 0, "justification": ""},
+        {"criterion": "B. Contexto DataLab League y equipo", "max": 3, "earned": 0, "pct": 0, "justification": ""},
+        {"criterion": "C. Producto de datos y alcance", "max": 4, "earned": 0, "pct": 0, "justification": ""},
+        {"criterion": "D. Estructura del repositorio", "max": 3, "earned": 0, "pct": 0, "justification": ""},
+        {"criterion": "E. Metodología CRISP-DM", "max": 3, "earned": 0, "pct": 0, "justification": ""},
+        {"criterion": "F. Evidencia, calidad y próximos pasos", "max": 3, "earned": 0, "pct": 0, "justification": ""}
+      ]
+    },
+    "total": {
+      "max_points": 60,
+      "earned_points": 0,
+      "percentage": 0,
+      "rating": "pending"
+    }
+  },
+  "strengths": [],
+  "improvement_opportunities": [],
+  "risks": [],
+  "required_actions": [],
+  "evidence_reviewed": [],
+  "final_comments": ""
+}

@@ -1,0 +1,28 @@
+{
+  "team_id": "",
+  "team_name": "",
+  "scores": {
+    "githubcopilot_instructions": {
+      "max_points": 40,
+      "earned_points": 0,
+      "criteria": []
+    },
+    "readme": {
+      "max_points": 20,
+      "earned_points": 0,
+      "criteria": []
+    },
+    "total": {
+      "max_points": 60,
+      "earned_points": 0,
+      "percentage": 0,
+      "rating": ""
+    }
+  },
+  "strengths": [],
+  "improvement_opportunities": [],
+  "risks": [],
+  "required_actions": [],
+  "evidence_reviewed": [],
+  "final_comments": ""
+}

@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "sprint": "sprint-01",
+    "team_id": "team-02",
+    "team_name": "",
+    "evaluated_at": "",
+    "evaluated_by": "sprint-01-evaluator-agent",
+    "status": "draft"
+  },
+  "scores": {
+    "githubcopilot_instructions": {
+      "max_points": 40,
+      "earned_points": 0,
+      "breakdown": []
+    },
+    "readme": {
+      "max_points": 20,
+      "earned_points": 0,
+      "breakdown": []
+    },
+    "total": {
+      "max_points": 60,
+      "earned_points": 0,
+      "percentage": 0,
+      "rating": "pending"
+    }
+  },
+  "strengths": [],
+  "improvement_opportunities": [],
+  "risks": [],
+  "required_actions": [],
+  "evidence_reviewed": [],
+  "final_comments": ""
+}
