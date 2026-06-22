@@ -9,7 +9,7 @@ Resumen consolidado de puntajes de todos los equipos en Sprint 1.
 | Equipo | GitHub Copilot Instructions / 40 | README / 20 | Total / 60 | Estado | Comentarios |
 |--------|----------------------------------|-------------|------------|--------|-------------|
 | Team 01 (Team SOFOM) | 38.75 | 20.00 | 58.75 | 🏆 Sobresaliente | Evaluación completada 2026-06-22 |
-| Team 02 | 0 | 0 | 0 | pendiente | — |
+| Team 02 (Team Indicadores BI) | 8.25 | 5.25 | 13.50 | 🚨 Crítico | Evaluación completada 2026-06-22 |
 | Team 03 (Team Carteras) | 36.50 | 18.50 | 55.00 | 🏆 Sobresaliente | Evaluación completada 2026-06-22 |
 
 ## Escala de Estado

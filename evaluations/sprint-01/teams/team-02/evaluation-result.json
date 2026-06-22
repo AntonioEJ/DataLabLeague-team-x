@@ -2,33 +2,74 @@
   "metadata": {
     "sprint": "sprint-01",
     "team_id": "team-02",
-    "team_name": "",
-    "evaluated_at": "",
+    "team_name": "Team Indicadores BI",
+    "evaluated_at": "2026-06-22",
     "evaluated_by": "sprint-01-evaluator-agent",
-    "status": "draft"
+    "status": "completed"
   },
   "scores": {
     "githubcopilot_instructions": {
       "max_points": 40,
-      "earned_points": 0,
-      "breakdown": []
+      "earned_points": 8.25,
+      "breakdown": [
+        {"criterion": "A. Claridad del prop\u00f3sito y alcance", "max": 5, "earned": 2.50, "pct": 50, "justification": "Define el objetivo general (automatizar creaci\u00f3n de KPIs) y lista entradas/salidas del sistema. Gap: no delimita expl\u00edcitamente qu\u00e9 NO debe hacer Copilot, no describe el contexto del repositorio ni la tecnolog\u00eda base (lenguaje, plataforma, empresa)."},
+        {"criterion": "B. Alineaci\u00f3n DataLab League / CRISP-DM", "max": 6, "earned": 1.50, "pct": 25, "justification": "No menciona DataLab League en ninguna parte del archivo. No incluye tabla de fases CRISP-DM. El flujo de 6 agentes (Enrich \u2192 Planner \u2192 Governance \u2192 Quality \u2192 Coder \u2192 Documentation) es una menci\u00f3n superficial sin mapeo a fases CRISP-DM ni equipo identificado."},
+        {"criterion": "C. Est\u00e1ndares de desarrollo y calidad", "max": 7, "earned": 0.0, "pct": 0, "justification": "El archivo no contiene ning\u00fan est\u00e1ndar de c\u00f3digo: sin PEP 8, sin Black/flake8, sin type annotations, sin docstrings, sin linters, sin pytest, sin criterios de calidad de c\u00f3digo. Las \u2018instrucciones para Copilot\u2019 en formato YAML describen tareas conceptuales de un agente, no est\u00e1ndares de desarrollo."},
+        {"criterion": "D. Data Quality y validaciones", "max": 6, "earned": 1.50, "pct": 25, "justification": "Menciona un agente 'Data Quality' en la tabla de arquitectura y lista 'Validaciones de calidad' como output del sistema. No define reglas DQ concretas (nulos, duplicados, completitud, formatos), ni dimensiones de calidad, ni expectativas de pruebas de datos."},
+        {"criterion": "E. Gobernanza, seguridad y cumplimiento", "max": 6, "earned": 1.50, "pct": 25, "justification": "Menciona un agente 'Data Governance' y el t\u00e9rmino 'linaje y pol\u00edticas'. No hay LFPDPPP, CNBV, PII, manejo de secretos, control de accesos ni principios de seguridad. Sin contexto de sector financiero ni regulatorio."},
+        {"criterion": "F. Uso efectivo de agentes y artefactos", "max": 5, "earned": 1.25, "pct": 25, "justification": "Describe el agente 'Enrich Data Story' con inputs, outputs e instrucciones YAML. El archivo se corta antes de describir el resto de agentes. No referencia .github/agents/ ni /agent-workflow/. No hay definici\u00f3n de handoffs entre agentes ni de artefactos de la cadena."},
+        {"criterion": "G. Evidencia GitHub y Definition of Done", "max": 5, "earned": 0.0, "pct": 0, "justification": "El archivo no tiene secci\u00f3n de evidencia en GitHub, no tiene Definition of Done, no tiene criterios de completitud ni referencia a commits, PRs o artefactos verificables."}
+      ]
     },
     "readme": {
       "max_points": 20,
-      "earned_points": 0,
-      "breakdown": []
+      "earned_points": 5.25,
+      "breakdown": [
+        {"criterion": "A. Descripci\u00f3n ejecutiva del proyecto", "max": 4, "earned": 2.0, "pct": 50, "justification": "Describe el producto (ecosistema de agentes para KPIs) con objetivo de automatizaci\u00f3n. Gap: no explica el problema espec\u00edfico de negocio que resuelve (\u00bfpor qu\u00e9 existe?), no menciona usuarios ni consumidores, no lista decisiones que habilita."},
+        {"criterion": "B. Contexto DataLab League y equipo", "max": 3, "earned": 0.0, "pct": 0, "justification": "No menciona DataLab League, no identifica el equipo, no indica el sprint, no menciona la din\u00e1mica de competencia."},
+        {"criterion": "C. Producto de datos y alcance", "max": 4, "earned": 1.0, "pct": 25, "justification": "Describe el sistema de forma general. No tiene secci\u00f3n de 'En alcance / Fuera de alcance'. No lista usuarios/consumidores ni las decisiones de negocio que habilita el producto."},
+        {"criterion": "D. Estructura del repositorio", "max": 3, "earned": 1.50, "pct": 50, "justification": "Incluye un \u00e1rbol ASCII de carpetas (agents/, inputs/, outputs/, templates/, config/). Gap: no referencia .github/agents/ ni .github/copilot-instructions.md. No indica d\u00f3nde est\u00e1n inputs, outputs y evidencias de la cadena de agentes."},
+        {"criterion": "E. Metodolog\u00eda CRISP-DM", "max": 3, "earned": 0.75, "pct": 25, "justification": "El 'Flujo de Procesamiento' de 7 pasos tiene una l\u00f3gica que recuerda a CRISP-DM pero no lo nombra ni lo mapea expl\u00edcitamente. No hay tabla de fases, ni estado por fase, ni entregables por fase."},
+        {"criterion": "F. Evidencia, calidad y pr\u00f3ximos pasos", "max": 3, "earned": 0.0, "pct": 0, "justification": "El README no tiene secci\u00f3n de evidencia esperada, no menciona calidad de datos, no tiene pr\u00f3ximos pasos ni roadmap del sprint."}
+      ]
     },
     "total": {
       "max_points": 60,
-      "earned_points": 0,
-      "percentage": 0,
-      "rating": "pending"
+      "earned_points": 13.50,
+      "percentage": 22.5,
+      "rating": "critico"
     }
   },
-  "strengths": [],
-  "improvement_opportunities": [],
-  "risks": [],
-  "required_actions": [],
-  "evidence_reviewed": [],
-  "final_comments": ""
+  "strengths": [
+    "Arquitectura de agentes bien concebida: 6 agentes con roles diferenciados y un flujo l\u00f3gico.",
+    "Estructura de carpetas definida (agents/, inputs/, outputs/, templates/, config/).",
+    "El agente Enrich Data Story tiene inputs, outputs e instrucciones YAML definidos.",
+    "Mentalidad de automatizaci\u00f3n end-to-end es correcta y alineada con DataLab League."
+  ],
+  "improvement_opportunities": [
+    "[Cr\u00edtico] copilot-instructions.md est\u00e1 incompleto: solo cubre el agente Enrich (79 l\u00edneas). Faltan los dem\u00e1s agentes, est\u00e1ndares de c\u00f3digo, DQ, gobernanza, seguridad y DoD.",
+    "[Cr\u00edtico] README no menciona DataLab League, el equipo ni el sprint.",
+    "[Cr\u00edtico] No hay ning\u00fan est\u00e1ndar de c\u00f3digo (PEP 8, Black, type hints, docstrings, pytest).",
+    "[Cr\u00edtico] No hay reglas DQ concretas (nulos, duplicados, completitud, validez).",
+    "[Cr\u00edtico] No hay secci\u00f3n de gobernanza/seguridad: sin LFPDPPP, CNBV, PII, secretos.",
+    "[Cr\u00edtico] No hay Definition of Done ni evidencia GitHub.",
+    "[Importante] No referencia .github/agents/ ni /agent-workflow/ en ninguno de los dos archivos.",
+    "[Importante] README sin alcance/fuera de alcance, usuarios, decisiones que habilita ni pr\u00f3ximos pasos."
+  ],
+  "risks": [
+    "[Alto] Sin est\u00e1ndares de c\u00f3digo ni DoD, el equipo puede entregar artefactos de calidad inconsistente en los siguientes sprints.",
+    "[Alto] Sin reglas DQ ni gobernanza, los indicadores generados pueden tener errores no detectados.",
+    "[Medio] La arquitectura de agentes no est\u00e1 conectada con .github/agents/ ni agent-workflow/, lo que puede generar desconexion entre la intenci\u00f3n y la implementaci\u00f3n."
+  ],
+  "required_actions": [
+    "Completar copilot-instructions.md con: (1) est\u00e1ndares de c\u00f3digo Python, (2) reglas DQ, (3) gobernanza y seguridad, (4) descripci\u00f3n de todos los agentes, (5) Definition of Done con evidencia.",
+    "Actualizar README con: (1) menci\u00f3n a DataLab League y equipo, (2) alcance/fuera de alcance, (3) CRISP-DM expl\u00edcito, (4) usuarios/consumidores, (5) pr\u00f3ximos pasos.",
+    "Referenciar .github/agents/ y .github/copilot-instructions.md en la estructura del repositorio.",
+    "Recomendar sesi\u00f3n de retroalimentaci\u00f3n con el equipo antes de Sprint 2."
+  ],
+  "evidence_reviewed": [
+    "evaluations/sprint-01/submissions/team-02/README.md",
+    "evaluations/sprint-01/submissions/team-02/copilot-instructions.md"
+  ],
+  "final_comments": "Team Indicadores BI entrega un Sprint 1 en estado cr\u00edtico (13.50/60, 22.5%). La arquitectura conceptual de agentes es s\u00f3lida y la intenci\u00f3n es correcta, pero ambos entregables est\u00e1n incompletos. copilot-instructions.md tiene 79 l\u00edneas y solo cubre un agente; le faltan est\u00e1ndares de c\u00f3digo, DQ, gobernanza y DoD. El README no identifica el equipo, no menciona DataLab League y no tiene alcance ni pr\u00f3ximos pasos. Se recomienda sesi\u00f3n de retroalimentaci\u00f3n urgente y reescritura de ambos entregables antes de Sprint 2."
 }
