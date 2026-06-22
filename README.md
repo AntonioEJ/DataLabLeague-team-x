@@ -100,6 +100,32 @@ Todo PR que avance la cadena de agentes debe completar el **Agent Workflow Check
 
 Ver [`agent-workflow/README.md`](agent-workflow/README.md) para documentación completa.
 
+---
+
+## GitHub Copilot Agents
+
+Las instrucciones de los agentes para GitHub Copilot viven en `.github/agents/`.
+
+Los artefactos operativos generados por los agentes viven en `/agent-workflow/`.
+
+### Cadena oficial de ejecución
+
+| # | Agente | Archivo |
+|---|---|---|
+| 01 | Enrich Data Story User | `.github/agents/01_enrich-data-story-user.agent.md` |
+| 02 | Data Governance | `.github/agents/02_data-governance.agent.md` |
+| 03 | Planner | `.github/agents/03_planner.agent.md` |
+| 04 | Coder | `.github/agents/04_coder.agent.md` |
+| 05 | QA | `.github/agents/05_qa.agent.md` |
+| 06 | Data Quality | `.github/agents/06_data-quality.agent.md` |
+| 07 | Documentation | `.github/agents/07_documentation.agent.md` |
+| 08 | Compliance / Security | `.github/agents/08_compliance-security.agent.md` |
+| 09 | Deployment | `.github/agents/09_deployment.agent.md` |
+| 10 | Monitoring | `.github/agents/10_monitoring.agent.md` |
+| 99 | Reviewer (transversal) | `.github/agents/99_reviewer.agent.md` |
+
+El agente **Reviewer (99)** es un agente transversal de revisión y aseguramiento de calidad. Puede invocarse en cualquier punto de la cadena y **no modifica archivos**.
+
 ## Contribuidores
 
 - Jose Antonio Esparza
