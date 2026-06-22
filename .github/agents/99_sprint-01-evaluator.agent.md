@@ -25,14 +25,12 @@ Transversal — aplica en la fase de Evaluación de CRISP-DM.
 
 ## Inputs
 
-- `README.md` general del repositorio del equipo
-- `githubcopilot-instructions.md` o equivalente (`.github/copilot-instructions.md`, `GitHub-copilot-instructions.md`, `.github/instructions/githubcopilot-instructions.md`)
-- Evidencia disponible en GitHub (commits, PRs, archivos versionados)
+- `evaluations/sprint-01/submissions/[team-id]/README.md` ← **README del equipo (subido manualmente)**
+- `evaluations/sprint-01/submissions/[team-id]/copilot-instructions.md` ← **instrucciones Copilot (subidas manualmente)**
 - `evaluations/sprint-01/rubrics/githubcopilot-instructions-rubric.md` — Rúbrica 40 pts
 - `evaluations/sprint-01/rubrics/readme-rubric.md` — Rúbrica 20 pts
 - `evaluations/sprint-01/rubrics/sprint-01-total-rubric.md` — Rúbrica total 60 pts
 - Prompt de `evaluations/sprint-01/agent-evaluator/evaluator-prompt.md`
-- Input completado basado en `evaluations/sprint-01/agent-evaluator/evaluation-input-template.json`
 
 ## Outputs
 

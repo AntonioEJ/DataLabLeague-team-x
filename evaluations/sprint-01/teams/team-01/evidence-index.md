@@ -7,7 +7,7 @@ Estado: pendiente
 
 | Evidencia | Ruta o link | Estado | Comentarios |
 |-----------|-------------|--------|-------------|
-| README.md | por_definir | pendiente | |
-| githubcopilot-instructions.md | por_definir | pendiente | |
+| README.md | `evaluations/sprint-01/submissions/team-01/README.md` | pendiente | |
+| copilot-instructions.md | `evaluations/sprint-01/submissions/team-01/copilot-instructions.md` | pendiente | |
 | PR asociado | por_definir | pendiente | |
 | Commit asociado | por_definir | pendiente | |

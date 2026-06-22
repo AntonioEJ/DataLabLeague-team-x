@@ -17,13 +17,15 @@ Evalúa el equipo indicado usando las rúbricas de:
 - /evaluations/sprint-01/rubrics/sprint-01-total-rubric.md
 
 Equipo a evaluar: [TEAM-ID] — [NOMBRE DEL EQUIPO]
-Repositorio: [URL DEL REPOSITORIO]
-Branch: [BRANCH A EVALUAR, por defecto: main]
+
+Los archivos del equipo están disponibles localmente en este repositorio:
+- README.md: `evaluations/sprint-01/submissions/[team-id]/README.md`
+- Copilot Instructions: `evaluations/sprint-01/submissions/[team-id]/copilot-instructions.md`
 
 Debes revisar:
-- README.md general del equipo.
-- githubcopilot-instructions.md o equivalente (.github/copilot-instructions.md, GitHub-copilot-instructions.md, .github/instructions/githubcopilot-instructions.md).
-- Evidencia GitHub disponible (commits, PRs, archivos versionados).
+- README.md del equipo en la ruta local indicada.
+- copilot-instructions.md del equipo en la ruta local indicada.
+- Evidencia disponible en este repositorio.
 - Relación con DataLab League y CRISP-DM.
 - Claridad, calidad, gobernanza, trazabilidad y accionabilidad.
 
@@ -79,8 +81,10 @@ Evalúa el equipo indicado usando las rúbricas de:
 - /evaluations/sprint-01/rubrics/sprint-01-total-rubric.md
 
 Equipo a evaluar: team-01 — Team 01
-Repositorio: [URL del repositorio del equipo]
-Branch: main
+
+Los archivos del equipo están disponibles localmente:
+- README.md: evaluations/sprint-01/submissions/team-01/README.md
+- Copilot Instructions: evaluations/sprint-01/submissions/team-01/copilot-instructions.md
 
 [... instrucciones completas del prompt arriba ...]
 ```
