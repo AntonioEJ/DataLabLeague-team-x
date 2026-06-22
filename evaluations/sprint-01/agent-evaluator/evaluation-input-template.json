@@ -1,15 +1,9 @@
 {
   "team_id": "",
   "team_name": "",
-  "repository_url": "",
-  "branch": "",
-  "readme_path": "README.md",
-  "githubcopilot_instructions_path": ".github/copilot-instructions.md",
-  "alternative_instruction_paths": [
-    "githubcopilot-instructions.md",
-    "GitHub-copilot-instructions.md",
-    ".github/instructions/githubcopilot-instructions.md"
-  ],
+  "submission_mode": "local",
+  "readme_path": "evaluations/sprint-01/submissions/[team-id]/README.md",
+  "copilot_instructions_path": "evaluations/sprint-01/submissions/[team-id]/copilot-instructions.md",
   "evidence_links": [],
   "notes": ""
 }
