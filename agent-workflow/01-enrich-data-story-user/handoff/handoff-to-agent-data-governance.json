@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "artifact_type": "agent_handoff",
+    "source_agent": "01-enrich-data-story-user",
+    "target_agent": "02-agent-data-governance",
+    "version": "1.0",
+    "status": "draft",
+    "created_at": "2026-06-22",
+    "requires_human_review": false
+  },
+  "handoff_summary": {
+    "business_context": "pendiente",
+    "technical_context": "pendiente",
+    "crisp_dm_phase": "business_understanding",
+    "completed_work": [
+      "Historia de usuario enriquecida generada",
+      "planner-input.json preliminar creado"
+    ],
+    "pending_work": [],
+    "key_decisions": [],
+    "known_limitations": []
+  },
+  "artifacts": {
+    "inputs_used": [
+      "01-enrich-data-story-user/inputs/initial-requirement.md"
+    ],
+    "outputs_generated": [
+      "01-enrich-data-story-user/outputs/enriched-user-story.json",
+      "01-enrich-data-story-user/outputs/planner-input.json"
+    ],
+    "evidence": [],
+    "required_next_inputs": [
+      "02-agent-data-governance/inputs/planner-input.json"
+    ]
+  },
+  "quality_gate": {
+    "passed": false,
+    "checks": [
+      { "name": "Historia de usuario enriquecida completa", "result": "pending", "notes": "" },
+      { "name": "KPIs de negocio definidos", "result": "pending", "notes": "" },
+      { "name": "Fuentes de datos identificadas", "result": "pending", "notes": "" },
+      { "name": "planner-input.json existe con campos mínimos", "result": "pending", "notes": "" },
+      { "name": "planner-input.json copiado a 02-agent-data-governance/inputs/", "result": "pending", "notes": "" }
+    ],
+    "issues": [],
+    "required_approvals": []
+  },
+  "open_questions": [],
+  "assumptions": [],
+  "risks": [],
+  "blockers": [],
+  "recommendation_to_next_agent": "Revisar planner-input.json preliminar, validar fuentes de datos, identificar PII y datos sensibles, completar sección governance antes de pasar a Agent Planner."
+}

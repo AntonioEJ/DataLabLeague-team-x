@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "agent-input",
+  "description": "Schema genérico para artefactos de input de agentes en la cadena DataLab League.",
+  "type": "object",
+  "required": ["metadata", "context"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["artifact_type", "agent_name", "version", "status", "created_at"],
+      "properties": {
+        "artifact_type": { "type": "string", "enum": ["agent_input"] },
+        "agent_name": { "type": "string" },
+        "source_agent": { "type": "string" },
+        "target_agent": { "type": "string" },
+        "version": { "type": "string", "pattern": "^\\d+\\.\\d+$" },
+        "status": {
+          "type": "string",
+          "enum": ["draft", "in_review", "approved", "rejected", "ready_for_next_agent", "archived"]
+        },
+        "created_at": { "type": "string", "format": "date" },
+        "updated_at": { "type": "string", "format": "date" }
+      }
+    },
+    "context": {
+      "type": "object",
+      "required": ["data_product_name", "crisp_dm_phase", "objective"],
+      "properties": {
+        "data_product_name": { "type": "string" },
+        "crisp_dm_phase": {
+          "type": "string",
+          "enum": ["business_understanding", "data_understanding", "data_preparation", "modeling", "evaluation", "deployment", "monitoring"]
+        },
+        "objective": { "type": "string" },
+        "scope": { "type": "string" },
+        "constraints": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "open_questions": { "type": "array", "items": { "type": "object" } },
+    "assumptions": { "type": "array", "items": { "type": "object" } },
+    "risks": { "type": "array", "items": { "type": "object" } }
+  }
+}

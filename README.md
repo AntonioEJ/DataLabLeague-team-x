@@ -15,6 +15,7 @@ Proyecto de DataLabLeague para el equipo X enfocado en datos, calidad e innovaci
 - `evidence/` - Evidencia de cumplimiento
 - `scorecard/` - Auto-evaluación y métricas
 - `contracts/` - Contratos de datos, calidad, interfaces, SLA/SLO y gobierno
+- `agent-workflow/` - Orquestación de agentes IA encadenados (CRISP-DM)
 
 ## Contracts
 
@@ -51,6 +52,53 @@ Los contratos son artefactos de primera clase de este repositorio. Toda transfor
 ## Documentación
 
 Consulte la documentación en `docs/` para más detalles.
+
+---
+
+## Agent Workflow
+
+La carpeta `/agent-workflow/` contiene la infraestructura de orquestación de agentes IA para producir datos gobernados, medibles y trazables siguiendo CRISP-DM.
+
+### Cadena de Agentes
+
+```
+requerimiento inicial
+    ↓
+01 Enrich Data Story User  →  planner-input.json (preliminar)
+    ↓
+02 Agent Data Governance   →  planner-input.json (gobernado) ← PASO CLAVE
+    ↓
+03 Agent Planner           →  coder-input.json
+    ↓
+04 Agent Coder             →  qa-input.json
+    ↓
+05 Agent QA                →  data-quality-input.json
+    ↓
+06 Agent Data Quality      →  documentation-input.json
+    ↓
+07 Agent Documentation     →  compliance-input.json
+    ↓
+08 Agent Compliance/Sec    →  deployment-input.json
+    ↓
+09 Agent Deployment        →  monitoring-input.json
+    ↓
+10 Agent Monitoring        →  final-product-evidence.json
+```
+
+**Agent Data Governance (paso 02)** es el guardián de la gobernanza: valida y enriquece el `planner-input.json` con clasificación de datos, ownership, PII, data contracts, controles de acceso y riesgos regulatorios **antes** de que Agent Planner diseñe la arquitectura.
+
+### Cómo Usar
+
+1. Leer `agent-workflow/00-shared/context.md` para entender el contexto del producto.
+2. Iniciar en `agent-workflow/01-enrich-data-story-user/inputs/initial-requirement.md`.
+3. Seguir la cadena: cada `handoff/handoff-*.json` indica el siguiente paso.
+4. El ciclo cierra cuando `10-agent-monitoring/outputs/final-product-evidence.json` está en estado `approved`.
+
+### Evidencia para Pull Requests
+
+Todo PR que avance la cadena de agentes debe completar el **Agent Workflow Checklist** del PR template y dejar evidencia en `agent-workflow/evidence/evidence-index.md`.
+
+Ver [`agent-workflow/README.md`](agent-workflow/README.md) para documentación completa.
 
 ## Contribuidores
 

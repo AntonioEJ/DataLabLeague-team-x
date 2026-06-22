@@ -1,0 +1,131 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "planner-input",
+  "description": "Schema para planner-input.json. Generado por Agente 01 (preliminar) y validado/enriquecido por Agente 02 (gobernado). Consumido por Agente 03 (Planner).",
+  "type": "object",
+  "required": ["metadata", "context", "enriched_story", "kpis", "governance"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["artifact_type", "agent_name", "version", "status", "created_at"],
+      "properties": {
+        "artifact_type": { "type": "string", "enum": ["agent_input", "agent_output"] },
+        "agent_name": { "type": "string" },
+        "source_agent": { "type": "string" },
+        "target_agent": { "type": "string" },
+        "version": { "type": "string", "pattern": "^\\d+\\.\\d+$" },
+        "status": {
+          "type": "string",
+          "enum": ["draft", "in_review", "approved", "rejected", "ready_for_next_agent", "archived"]
+        },
+        "created_at": { "type": "string", "format": "date" },
+        "updated_at": { "type": "string", "format": "date" }
+      }
+    },
+    "context": {
+      "type": "object",
+      "required": ["data_product_name", "crisp_dm_phase", "objective"],
+      "properties": {
+        "data_product_name": { "type": "string" },
+        "business_area": { "type": "string" },
+        "crisp_dm_phase": {
+          "type": "string",
+          "enum": ["business_understanding", "data_understanding", "data_preparation", "modeling", "evaluation", "deployment", "monitoring"]
+        },
+        "objective": { "type": "string" },
+        "scope": { "type": "string" },
+        "constraints": { "type": "array", "items": { "type": "string" } },
+        "dependencies": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "business_context": {
+      "type": "object",
+      "properties": {
+        "problem": { "type": "string" },
+        "impact": { "type": "string" },
+        "users": { "type": "array", "items": { "type": "string" } },
+        "stakeholders": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "enriched_story": {
+      "type": "object",
+      "required": ["title"],
+      "properties": {
+        "title": { "type": "string" },
+        "as_a": { "type": "string" },
+        "i_want": { "type": "string" },
+        "so_that": { "type": "string" }
+      }
+    },
+    "data_sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "system": { "type": "string" },
+          "owner": { "type": "string" },
+          "contains_pii": { "type": "boolean" }
+        }
+      }
+    },
+    "entities": { "type": "array", "items": { "type": "string" } },
+    "kpis": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "formula": { "type": "string" },
+          "threshold": { "type": "string" },
+          "frequency": { "type": "string" }
+        }
+      }
+    },
+    "business_rules": { "type": "array", "items": { "type": "string" } },
+    "data_quality_rules_initial": { "type": "array", "items": { "type": "object" } },
+    "acceptance_criteria": { "type": "array", "items": { "type": "string" } },
+    "governance": {
+      "type": "object",
+      "required": ["governance_approved"],
+      "description": "Completado por Agent Data Governance (paso 02). governance_approved: true es condición para que Agent Planner inicie.",
+      "properties": {
+        "reviewed_by": { "type": ["string", "null"] },
+        "review_date": { "type": ["string", "null"] },
+        "data_classification": {
+          "type": ["string", "null"],
+          "enum": ["público", "interno", "confidencial", "restringido", null]
+        },
+        "data_ownership": {
+          "type": "object",
+          "properties": {
+            "owner": { "type": ["string", "null"] },
+            "steward": { "type": ["string", "null"] },
+            "custodian": { "type": ["string", "null"] }
+          }
+        },
+        "pii_fields": { "type": "array", "items": { "type": "string" } },
+        "sensitive_fields": { "type": "array", "items": { "type": "string" } },
+        "usage_purpose": { "type": ["string", "null"] },
+        "usage_restrictions": { "type": "array", "items": { "type": "string" } },
+        "data_contracts": { "type": "array", "items": { "type": "object" } },
+        "access_control": { "type": "object" },
+        "lineage": { "type": "object" },
+        "data_catalog": { "type": "object" },
+        "retention": { "type": "object" },
+        "audit_required": { "type": "boolean" },
+        "regulatory_risks": { "type": "array", "items": { "type": "object" } },
+        "misuse_risks": { "type": "array", "items": { "type": "object" } },
+        "mitigations": { "type": "array", "items": { "type": "string" } },
+        "approvals_required": { "type": "array", "items": { "type": "string" } },
+        "approved_by": { "type": "array", "items": { "type": "string" } },
+        "governance_approved": { "type": "boolean" },
+        "conditions_for_planner": { "type": ["string", "null"] }
+      }
+    },
+    "recommendations_for_planner": { "type": "array", "items": { "type": "string" } },
+    "open_questions": { "type": "array", "items": { "type": "object" } },
+    "assumptions": { "type": "array", "items": { "type": "object" } },
+    "risks": { "type": "array", "items": { "type": "object" } }
+  }
+}

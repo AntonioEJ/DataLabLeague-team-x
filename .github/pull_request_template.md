@@ -98,6 +98,25 @@
 
 ---
 
+## Agent Workflow Checklist
+
+> Completar si este PR avanza la cadena de agentes en `/agent-workflow/`.
+
+- [ ] Se actualizó el input del agente correspondiente.
+- [ ] Se generaron los outputs esperados del agente.
+- [ ] Se creó o actualizó el handoff al siguiente agente.
+- [ ] `handoff/*.json` tiene `quality_gate.passed: true` (o justificación de por qué no).
+- [ ] Se actualizaron supuestos en `00-shared/assumptions.md` si aplica.
+- [ ] Se actualizaron preguntas abiertas en `00-shared/open-questions.md` si aplica.
+- [ ] Se actualizaron riesgos en `00-shared/risk-register.md` si aplica.
+- [ ] Se dejó evidencia registrada en `XX-agent/evidence/` y en `evidence/evidence-index.md`.
+- [ ] Se documentó la fase CRISP-DM correspondiente en el handoff JSON.
+- [ ] El input del siguiente agente existe en `YY-agent/inputs/`.
+- [ ] **Si aplica — Agent Data Governance (paso 02)**: se revisó clasificación de datos, ownership, PII, lineage, data catalog y controles de acceso.
+- [ ] **Si aplica — Agent Data Governance (paso 02)**: `planner-input.json` gobernado tiene `governance.governance_approved: true` y está en `03-agent-planner/inputs/`.
+
+---
+
 ## Referencias
 
 > Links a contratos, historias de usuario, evidencias, ADRs, tickets.
@@ -105,3 +124,4 @@
 - Contrato relacionado: `contracts/TODO`
 - Historia de usuario: `docs/user-stories/TODO`
 - Evidencia: `evidence/TODO`
+- Agent Workflow: `agent-workflow/evidence/evidence-index.md`

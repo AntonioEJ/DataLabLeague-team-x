@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "artifact_type": "agent_handoff",
+    "source_agent": "10-agent-monitoring",
+    "target_agent": "none — fin del ciclo CRISP-DM",
+    "version": "1.0",
+    "status": "draft",
+    "created_at": "2026-06-22",
+    "requires_human_review": true
+  },
+  "handoff_summary": {
+    "crisp_dm_phase": "monitoring",
+    "completed_work": ["Ciclo CRISP-DM completado", "final-product-evidence.json generado"],
+    "pending_work": [],
+    "key_decisions": [],
+    "known_limitations": []
+  },
+  "artifacts": {
+    "inputs_used": ["10-agent-monitoring/inputs/monitoring-input.json"],
+    "outputs_generated": [
+      "10-agent-monitoring/outputs/monitoring-plan.md",
+      "10-agent-monitoring/outputs/final-product-evidence.json"
+    ],
+    "evidence": [],
+    "required_next_inputs": []
+  },
+  "quality_gate": {
+    "passed": false,
+    "checks": [
+      { "name": "KPIs operativos definidos", "result": "pending" },
+      { "name": "Alertas configuradas", "result": "pending" },
+      { "name": "final-product-evidence.json aprobado", "result": "pending" },
+      { "name": "Sign-off completo", "result": "pending" }
+    ],
+    "issues": [],
+    "required_approvals": ["Product Owner", "Data Owner", "Tech Lead"]
+  },
+  "open_questions": [],
+  "assumptions": [],
+  "risks": [],
+  "blockers": [],
+  "recommendation_to_next_agent": "Si se requiere una nueva iteración, iniciar en 01-enrich-data-story-user con el backlog de mejora continua como input."
+}

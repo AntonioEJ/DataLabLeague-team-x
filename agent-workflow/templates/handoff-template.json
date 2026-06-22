@@ -1,0 +1,42 @@
+{
+  "_comment": "Template para handoffs. quality_gate.passed: true es condición para transferir.",
+  "metadata": {
+    "artifact_type": "agent_handoff",
+    "source_agent": "{{XX-agent-name}}",
+    "target_agent": "{{YY-agent-name}}",
+    "version": "1.0",
+    "status": "draft",
+    "created_at": "{{YYYY-MM-DD}}",
+    "requires_human_review": false
+  },
+  "handoff_summary": {
+    "business_context": "{{contexto de negocio}}",
+    "technical_context": "{{contexto técnico}}",
+    "crisp_dm_phase": "{{fase}}",
+    "completed_work": ["{{item completado}}"],
+    "pending_work": [],
+    "key_decisions": [],
+    "known_limitations": []
+  },
+  "artifacts": {
+    "inputs_used": ["{{archivo de input usado}}"],
+    "outputs_generated": ["{{archivo de output generado}}"],
+    "evidence": [
+      { "type": "commit", "reference": "{{hash}}", "description": "{{descripción}}" }
+    ],
+    "required_next_inputs": ["{{archivo requerido por el siguiente agente}}"]
+  },
+  "quality_gate": {
+    "passed": false,
+    "checks": [
+      { "name": "{{nombre del check}}", "result": "pending", "notes": "" }
+    ],
+    "issues": [],
+    "required_approvals": []
+  },
+  "open_questions": [],
+  "assumptions": [],
+  "risks": [],
+  "blockers": [],
+  "recommendation_to_next_agent": "{{recomendación}}"
+}

@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "artifact_type": "agent_handoff",
+    "source_agent": "09-agent-deployment",
+    "target_agent": "10-agent-monitoring",
+    "version": "1.0",
+    "status": "draft",
+    "created_at": "2026-06-22",
+    "requires_human_review": false
+  },
+  "handoff_summary": {
+    "crisp_dm_phase": "pendiente",
+    "completed_work": ["pendiente"],
+    "pending_work": [],
+    "key_decisions": [],
+    "known_limitations": []
+  },
+  "artifacts": {
+    "inputs_used": [],
+    "outputs_generated": [],
+    "evidence": [],
+    "required_next_inputs": []
+  },
+  "quality_gate": {
+    "passed": false,
+    "checks": [
+      { "name": "Outputs obligatorios generados", "result": "pending" },
+      { "name": "Input del siguiente agente existe", "result": "pending" }
+    ],
+    "issues": [],
+    "required_approvals": []
+  },
+  "open_questions": [],
+  "assumptions": [],
+  "risks": [],
+  "blockers": [],
+  "recommendation_to_next_agent": "pendiente"
+}

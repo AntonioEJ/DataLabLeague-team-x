@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "artifact_type": "agent_input",
+    "agent_name": "06-agent-data-quality",
+    "source_agent": "05-agent-qa",
+    "target_agent": "06-agent-data-quality",
+    "version": "1.0",
+    "status": "draft",
+    "created_at": "2026-06-22",
+    "updated_at": "2026-06-22"
+  },
+  "context": { "data_product_name": "pendiente", "crisp_dm_phase": "evaluation" },
+  "dq_rules": [],
+  "datasets_to_validate": [],
+  "control_totals_expected": {},
+  "dimensions": ["completeness", "uniqueness", "consistency", "accuracy", "validity", "freshness", "timeliness"],
+  "dq_threshold": 98,
+  "open_questions": [],
+  "assumptions": [],
+  "risks": []
+}

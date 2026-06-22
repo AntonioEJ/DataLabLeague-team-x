@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "artifact_type": "agent_handoff",
+    "source_agent": "02-agent-data-governance",
+    "target_agent": "03-agent-planner",
+    "version": "1.0",
+    "status": "draft",
+    "created_at": "2026-06-22",
+    "requires_human_review": true
+  },
+  "handoff_summary": {
+    "business_context": "pendiente",
+    "technical_context": "pendiente",
+    "crisp_dm_phase": "business_understanding",
+    "completed_work": [
+      "Revisión de gobierno de datos completada",
+      "Clasificación de datos documentada",
+      "Ownership definido",
+      "PII y datos sensibles identificados",
+      "planner-input.json gobernado generado"
+    ],
+    "pending_work": [],
+    "key_decisions": [],
+    "known_limitations": []
+  },
+  "artifacts": {
+    "inputs_used": [
+      "02-agent-data-governance/inputs/planner-input.json"
+    ],
+    "outputs_generated": [
+      "02-agent-data-governance/outputs/governance-assessment.md",
+      "02-agent-data-governance/outputs/data-classification.md",
+      "02-agent-data-governance/outputs/data-ownership.md",
+      "02-agent-data-governance/outputs/pii-sensitive-data-review.md",
+      "02-agent-data-governance/outputs/planner-input.json"
+    ],
+    "evidence": [],
+    "required_next_inputs": [
+      "03-agent-planner/inputs/planner-input.json"
+    ]
+  },
+  "quality_gate": {
+    "passed": false,
+    "checks": [
+      { "name": "Clasificación de datos completa", "result": "pending", "notes": "" },
+      { "name": "Data Owner, Steward y Custodio definidos", "result": "pending", "notes": "" },
+      { "name": "PII identificado con controles definidos", "result": "pending", "notes": "" },
+      { "name": "Data contracts identificados", "result": "pending", "notes": "" },
+      { "name": "Controles de acceso documentados", "result": "pending", "notes": "" },
+      { "name": "governance.governance_approved: true en planner-input.json", "result": "pending", "notes": "" },
+      { "name": "planner-input.json gobernado copiado a 03-agent-planner/inputs/", "result": "pending", "notes": "" }
+    ],
+    "issues": [],
+    "required_approvals": [
+      "Data Owner",
+      "Data Governance Lead"
+    ]
+  },
+  "open_questions": [],
+  "assumptions": [],
+  "risks": [],
+  "blockers": [],
+  "recommendation_to_next_agent": "Usar el planner-input.json gobernado como base del plan técnico. Respetar las restricciones de acceso, PII y controles de gobierno definidos en la sección governance del artefacto."
+}

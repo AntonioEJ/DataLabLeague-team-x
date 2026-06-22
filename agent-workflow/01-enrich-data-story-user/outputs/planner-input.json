@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "artifact_type": "agent_input",
+    "agent_name": "01-enrich-data-story-user",
+    "source_agent": "01-enrich-data-story-user",
+    "target_agent": "02-agent-data-governance",
+    "version": "1.0",
+    "status": "draft",
+    "created_at": "2026-06-22",
+    "updated_at": "2026-06-22",
+    "note": "Este es el planner-input.json PRELIMINAR generado por Agente 01. Debe ser validado y enriquecido por Agent Data Governance antes de ser consumido por Agent Planner."
+  },
+  "context": {
+    "data_product_name": "pendiente",
+    "business_area": "pendiente",
+    "crisp_dm_phase": "business_understanding",
+    "objective": "pendiente",
+    "scope": "pendiente",
+    "constraints": [],
+    "dependencies": []
+  },
+  "business_context": {
+    "problem": "pendiente",
+    "impact": "pendiente",
+    "users": [],
+    "stakeholders": []
+  },
+  "enriched_story": {
+    "title": "pendiente",
+    "as_a": "pendiente",
+    "i_want": "pendiente",
+    "so_that": "pendiente"
+  },
+  "data_sources": [],
+  "entities": [],
+  "kpis": [],
+  "business_rules": [],
+  "data_quality_rules_initial": [],
+  "governance_requirements_initial": {
+    "note": "Estos son requerimientos iniciales. Agent Data Governance los validará y enriquecerá.",
+    "suspected_pii": [],
+    "suspected_sensitive_data": [],
+    "regulatory_context": "pendiente"
+  },
+  "acceptance_criteria": [],
+  "open_questions": [],
+  "assumptions": [],
+  "risks": [],
+  "governance": {
+    "reviewed_by": null,
+    "review_date": null,
+    "data_classification": null,
+    "data_ownership": {
+      "owner": null,
+      "steward": null,
+      "custodian": null
+    },
+    "pii_fields": [],
+    "sensitive_fields": [],
+    "data_contracts": [],
+    "access_control": {},
+    "lineage": {},
+    "regulatory_risks": [],
+    "approved_by": [],
+    "governance_approved": false,
+    "note": "Este campo será completado por Agent Data Governance (paso 02)."
+  }
+}

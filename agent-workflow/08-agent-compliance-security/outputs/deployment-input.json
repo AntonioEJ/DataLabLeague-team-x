@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "artifact_type": "agent_input",
+    "agent_name": "09-agent-deployment",
+    "source_agent": "08-agent-compliance-security",
+    "target_agent": "09-agent-deployment",
+    "version": "1.0",
+    "status": "draft",
+    "created_at": "2026-06-22",
+    "updated_at": "2026-06-22"
+  },
+  "context": { "data_product_name": "pendiente", "crisp_dm_phase": "deployment" },
+  "security_review_passed": false,
+  "privacy_review_passed": false,
+  "deployment_approved": false,
+  "security_findings": [],
+  "required_approvals": ["CISO", "Compliance Officer"],
+  "deployment_targets": [],
+  "open_questions": [],
+  "assumptions": [],
+  "risks": []
+}
