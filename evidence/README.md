@@ -1,7 +1,16 @@
-# Evidence Package
+# Evidence Package — Presentación y Evaluación
 
-## Descripción
-Paquete de evidencia documentando cumplimiento, procesos y resultados del proyecto.
+## Propósito
+
+Esta carpeta contiene la **evidencia consolidada** del proyecto DataLab League para:
+- **Presentación** ante jurados y stakeholders
+- **Evaluación** de competencias y resultados
+- **Demostración** de cumplimiento y calidad
+- **Entrega final** del proyecto
+
+> **Nota**: Para tracking operativo del workflow de agentes, ver [`agent-workflow/evidence/`](../agent-workflow/evidence/)
+
+---
 
 ## Contenido
 
@@ -43,6 +52,25 @@ evidence/
 └── skills/
     ├── skill-1.md
     └── skill-2.md
+```
+
+## Relación con Agent Workflow
+
+Esta evidencia se alimenta del proceso documentado en:
+
+```
+agent-workflow/
+├── 01-enrich.../evidence/     ─┐
+├── 02-governance.../evidence/  │
+├── 03-planner.../evidence/     │  Evidencia granular
+├── ...                         ├─ por agente
+├── 10-monitoring.../evidence/ ─┘
+└── evidence/                    
+    └── evidence-index.md  ← Índice operativo
+                ↓
+        Consolidan y resumen
+                ↓
+         evidence/ (raíz)  ← Presentación final
 ```
 
 ## Uso

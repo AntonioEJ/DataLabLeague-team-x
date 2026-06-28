@@ -43,6 +43,20 @@ Los contratos son artefactos de primera clase de este repositorio. Toda transfor
 
 **Revisión en PR**: Todo PR que modifique datos, esquemas o pipelines debe completar el checklist de contratos del PR template.
 
+## Evidencia
+
+Este proyecto mantiene tres niveles de evidencia documentados en [`docs/evidence-architecture.md`](docs/evidence-architecture.md):
+
+1. **Evidencia Granular** (`agent-workflow/XX-agent-name/evidence/`) — Trazabilidad por agente
+2. **Tracking Operativo** (`agent-workflow/evidence/`) — Índice central del workflow
+3. **Presentación Final** (`evidence/`) — Evidencia consolidada para evaluación
+
+**Relación**: La evidencia granular alimenta el tracking operativo, que a su vez consolida la presentación final.
+
+**Para jurados y evaluadores**: Ver [`evidence/`](evidence/)  
+**Para tracking del workflow**: Ver [`agent-workflow/evidence/evidence-index.md`](agent-workflow/evidence/evidence-index.md)  
+**Para arquitectura completa**: Ver [`docs/evidence-architecture.md`](docs/evidence-architecture.md)
+
 ## Inicio Rápido
 
 1. Clonar el repositorio

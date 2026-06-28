@@ -96,7 +96,38 @@ agent-workflow/
 ├── 10-agent-monitoring/
 ├── templates/                    ← plantillas reutilizables
 ├── schemas/                      ← JSON Schemas de validación
-└── evidence/                     ← índice global de evidencia
+└── evidence/                     ← índice global de evidencia (tracking operativo)
+```
+
+---
+
+## Flujo de Evidencia
+
+### Tres Niveles de Evidencia
+
+1. **Evidencia Granular** (por agente)
+   - Ubicación: `agent-workflow/XX-agent-name/evidence/`
+   - Contenido: Logs, decisiones, outputs, handoffs del agente específico
+   - Propósito: Trazabilidad detallada de ejecución
+
+2. **Tracking Operativo** (workflow)
+   - Ubicación: `agent-workflow/evidence/`
+   - Contenido: `evidence-index.md` con registro EVD-001 a EVD-010
+   - Propósito: Índice central de evidencia del workflow
+
+3. **Presentación Final** (raíz)
+   - Ubicación: `evidence/` (raíz del repositorio)
+   - Contenido: Data story, skills, testing, DQ, governance, demo
+   - Propósito: Evidencia consolidada para evaluación DataLab League
+
+### Relación
+
+```
+Agentes (XX-agent-name/evidence/)
+        ↓
+Workflow (agent-workflow/evidence/evidence-index.md)
+        ↓
+Presentación (evidence/)
 ```
 
 Cada carpeta de agente tiene la misma estructura interna:
