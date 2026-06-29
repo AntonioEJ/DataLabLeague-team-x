@@ -22,6 +22,7 @@ def validate_directory_structure():
         ".github/instructions",
         ".github/skills",
         ".github/workflows",
+        ".github/prompts",
         "agent-workflow/prompts",
         "agent-workflow/templates",
         "agent-workflow/schemas",

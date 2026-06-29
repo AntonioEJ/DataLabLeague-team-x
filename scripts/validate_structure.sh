@@ -8,7 +8,7 @@ REQUIRED_PATHS=(
     "AGENTS.md"
     ".github/copilot-instructions.md"
     ".github/agents/00_enrich-data-story-user.agent.md"
-    "agent-workflow/prompts/02-enrich-data-story-user.prompt.md"
+    ".github/prompts/01-enrich-data-story-user.prompt.md"
     ".github/skills/data-story-user-enrichment/SKILL.md"
     "agent-workflow/schemas/agent-input.schema.json"
     "agent-workflow/templates/agent-input-template.json"
